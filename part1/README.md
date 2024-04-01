@@ -34,7 +34,7 @@ Follow the instructions below, to fork https://github.com/tweag/bsides-tampa-wor
 
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
 
-If you do not have .git installed locally, also ensure you set this up:
+If you do not have Git installed locally, also ensure you set this up:
 
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
@@ -141,7 +141,7 @@ And we will provide a quick overview here on what you need to do, to get the CLI
 
 3. Unzip the bundle.
 
-4. Once the zip is extracted the CodeQL CLI will be available for use. You may want to add this to your `PATH` so you can execute the CLI with a simple `codeql` command.
+4. Once the zip is extracted the CodeQL CLI will be available for use. You may want to add this to your `PATH` so you can execute the CLI with a simple `codeql` command. You can read more about adding CodeQL to your `PATH` here: https://docs.github.com/en/code-security/codeql-cli/getting-started-with-the-codeql-cli/setting-up-the-codeql-cli#2-extract-the-zip-archive  
 
 5. Test the codeql command, you should see something similar to:
 
@@ -191,7 +191,8 @@ codeql-java-consistency-queries (/bsidestampa/qlpacks/codeql/java/ql/consistency
 codeql-swift-tests (/bsidestampa/qlpacks/codeql/swift/ql/test)
 
 ```
-Now we have the commandline tool in place we are going to generate a database off of our vulnerable code.
+Now we have the commandline tool in place we are going to generate a database off of our vulnerable code. This database is an Abstract Syntax Tree representation of the code combined with some metadata about the code base. GitHub provides and overview on the database and using it in VS Code here: https://codeql.github.com/docs/codeql-for-visual-studio-code/exploring-the-structure-of-your-source-code/
+
 
 ```console
 
@@ -222,9 +223,9 @@ Finished zipping source archive (247.38 KiB).
 Successfully created database at /bsidestampa/javascript-database.
 
 ```
-We now have a database generated off out code to work with, and can use this in VS Code. However before we can use it via the IDE we will need to install the plugin.
+We now have a database generated from our code to work with. However before we can use it via the VS Code IDE we will need to install the plugin.
 
-You can find basic installation structuctions for VS Code here:
+You can find basic installation instructions for VS Code here:
 
 https://codeql.github.com/docs/codeql-for-visual-studio-code/setting-up-codeql-in-visual-studio-code/
 
@@ -282,7 +283,23 @@ For those of you with student accounts or paid GitHub accounts you can integrate
 
 Copilot is GitHub's new tool to integrate GenAI into the development process allowing you to generate code and unit tests on the fly. It can also be used to help detect security vulnerablities in source code.
 
-If you have a copy of Copilot you can follow along with the steps below.
+To register for a plan refer to:
+
+https://github.com/features/copilot/plans
+
+A quick start guide is provided here: https://docs.github.com/en/copilot/quickstart
+
+For this course, we are interested in installing the Copilot extension in VS Code.
+
+1. Install the plugin from the marketplace: https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
+
+2. If prompted, open VS Code
+
+3. Under the `Extension: GitHub Copilot` tab, select `Install`
+
+4. You will now be prompted to grant permissions to authorize Copilot.
+
+With Copilot installed you can follow along with the steps below.
 
 1. Open the Chat Window
 
@@ -476,7 +493,7 @@ threshold: medium
 
 Of course, this introduces the risk that true positives could be added to the code base. 
 
-Talisman can also be run as a command line tool. This will scan the target director for secrets and output a JSON file with a list of findings.
+Talisman can also be run as a command line tool. This will scan the target directory for secrets and output a JSON file with a list of findings.
 
 To run a scan you can type:
 
@@ -586,7 +603,7 @@ With BFG setup, we can now try and experiment.
 
 We previously modified our `.gitignore` file so that we can now commit the `.env` file which contains secrets. 
 
-We are now going to demonstrate how a mistake can happen that needs to be cleanred up. Commit this modified `.gitignore` file now:
+We are now going to demonstrate how a mistake can happen that needs to be cleaned up. Add and commit this modified `.gitignore` file now:
 
 ```console
 git commit -m"Adding the .env file so we can demonstrate BFG"
