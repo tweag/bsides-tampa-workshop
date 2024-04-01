@@ -254,7 +254,7 @@ This secret can be used now in Actions pipelines, to avoid having to hard code i
 
 Let's try this out.
 
-Create a new Action in your `.github/worflows` directory called `usingsecrets.yml`. To this file add the following code:
+Create a new Action in your `.github/workflows` directory called `usingsecrets.yml`. To this file add the following code:
 
 ```yaml
 
