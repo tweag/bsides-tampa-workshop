@@ -3,7 +3,7 @@
 # Part 2: Repository Scanning 
 
 
-For this part of the workshop we've provide two vulberable applications to work with.
+For this part of the workshop we've provide two vulnerable applications to work with.
 
 One is Java based, and the second is JavaScript. These can be found under:
 
@@ -27,7 +27,7 @@ We can use both GitHub native and CI/CD orientated tools to scan for secrets in 
 
 ### GitHub Native Secrets Scanning
 
-GitHub provides us with an inbuilt mechanism to scan for secrets. This includes the ability to scan for custom patterns as well as common key formats, such as AWS API keys.
+GitHub provides us with an built-in mechanism to scan for secrets. This includes the ability to scan for custom patterns as well as common key formats, such as AWS API keys.
 
 Configuration of Secrets scanning in GitHub, including the configuration of custom patterns is found under `Settings > Code security and analysis`.
 
@@ -69,7 +69,7 @@ If you select the PEM detection finding, you will find some helpful information 
 
 3. The detected location
  
-If you wish, you can remove the key from your forked repository and commit and push the change. 
+If you wish, you can remove the key from your forked repository and commit and push the change. Remember we can use the steps provided in `part1` to remove a file from Git. 
 
 Re-visit this screen and then choose an option from the `Close as` drop down to close out the finding, for example `Revoked`
 
@@ -166,7 +166,7 @@ index 0000000..523c04d
 
 So now we have two tools running in our Actions workflows to detect for secrets and can compare the output of them both. 
 
-You've also seen how easy it is to add a marketplace action to your repository. There are numerous Actions available in the marketplace inclduing integrations with major security vendor tooling. 
+You've also seen how easy it is to add a marketplace action to your repository. There are numerous Actions available in the marketplace including integrations with major security vendor tooling. 
 
 Let's try another example. 
 
@@ -334,7 +334,9 @@ We can see that merging this pull request fixes 4 dependabot alerts in relation 
 4. Improper Input Validation in Apache Log4j 
 
 
-If you merge in this PR it will fix the issue. You can also try this with the JavaScript related dependency issues. 
+If you merge in this PR it will fix the issue. If you are unfamiliar with this concept, GitHub provides an overview here: https://docs.github.com/en/code-security/dependabot/working-with-dependabot/managing-pull-requests-for-dependency-updates
+
+You can also try this with the JavaScript related dependency issues to fix the vulnerabilities.  
 
 Later in this workshop we will be looking at how you can extract the list of dependencies as an SBOM. Now we have fixed vulnerabilities in our repository, let's take a look at the application source code again.
 
@@ -467,9 +469,9 @@ Let's now take a look at Software Bill of Materials (SBOM).
 
 ## Module 10:SBOMs (Software Bill of Materials)
 
-Our final task is going to be to extract the SBOM from our project.
+Our final task is going to be to extract the SBOM from our project. An SBOM is a nested inventory of the components within an application. You can think of it as an ingrediants list of sorts. US government ageencies are now mandated to obtain an SBOM from their software vendors and internal engineering teams in order to validate the products security. So being familiar with the term and process is helpful. 
 
-The SBOM can be found under `Insights > Dependency graph`.
+Within GitHub the SBOM can be found under `Insights > Dependency graph`.
 
 You'll notice on this screen that if you haven't fixed any of the security issues associated with dependencies these will be flagged.
 
@@ -523,6 +525,6 @@ Congratulations you have completed Part 2 of this workshop.
 
 During this 4 hour session we have walked through many techniques, but we could only scratch the surface.
 
-Armed with the content in this qworkshop you can now dig in further to everything from SAST to SBOMs.
+Armed with the content in this workshop you can now dig in further to everything from SAST to SBOMs.
 
 Good luck on your DevSecOps journey.
