@@ -1,0 +1,72 @@
+Workshop Setup
+--------------
+
+This is a quick setup guide for the BSides Tampa workshop on April 5th 2024.
+
+You can use this to get your environment configured prior to the event.
+
+The source code and guides for the workshop will be available the night before (4th) at:
+
+https://github.com/tweag/bsides-tampa-workshop
+
+Account setup and tool installation
+-----------------------------------
+
+To start with, make sure you have a GitHub account: https://www.github.com
+
+Also ensure that Git is installed locally on your machine:
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Next setup an SSH keys:
+
+Generate a new SSH key pair on your local machine if you don't have one
+> ssh-keygen -t ed25519 -C "your_email@example.com"
+
+Copy the public key file (e.g. id_ed25519.pub) to your clipboard
+> clip < ~/.ssh/id_ed25519.pub    # On Windows
+> pbcopy < ~/.ssh/id_ed25519.pub  # On macOS
+> cat ~/.ssh/id_ed25519.pub       # On Linux, then manually copy
+
+Login to your GitHub account and goto:
+A. Settings -> Access -> SSH & GPG keys -> New SSH key
+B. Enter a title for the key, then paste the public key we generated in step 2.
+
+We will use a number of tools during the workshop, so you can install these in advance.
+
+Recommended IDE: VS Code https://code.visualstudio.com/
+
+SonarLint plugin for VS Code: https://docs.sonarsource.com/sonarcloud/improving/sonarlint/
+
+You can also setup a free SonarCloud account using your GitHub user: https://sonarcloud.io/
+
+We have two pre-commit hook tools to install:
+
+1. AWS Labs git-secret: https://github.com/awslabs/git-secrets
+2. Talisman: https://github.com/thoughtworks/talisman
+
+You may also like to read about .gitignore files in advance:
+
+.gitignore files: https://git-scm.com/docs/gitignore
+
+Also install BFG repo-cleaner: https://rtyley.github.io/bfg-repo-cleaner/
+
+During the course we will talk about CodeQL. To install this locally follow these steps:
+
+https://docs.github.com/en/code-security/codeql-cli/getting-started-with-the-codeql-cli/setting-up-the-codeql-cli
+
+During the workshop we will explain installing CodeQL locally as it can be complex, so don't worry if you get stuck following these instructions.
+
+We will also explain a bit about how GitHub Copilot works in the workshop, you can optionally sign up for an account here:
+
+https://github.com/features/copilot
+
+If you have any questions our team will be walking around the classroom to help you with installation questions and get you unblocked.
+
+Thanks for signing up!
+
+
+
+
+
+
