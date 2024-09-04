@@ -1,5 +1,7 @@
 ![BSides Tampa Logo](tampalogo.png "Copyright BSides Tampa 2024")
 
+This repository is now a public archive. Feel free to clone and re-use the content for your own courses. 
+
 # BSides Tampa 2024 - Shifting Security Left a Hands On Workshop
 
 The following repository contains training material for the BSides Tampa 2024 workshop on shifting security left.
